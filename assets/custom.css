@@ -991,9 +991,10 @@ footer .footer__content-bottom .footer__content-bottom-wrapper {
 }
 
 body {
-  background: radial-gradient(circle at 18% 12%, rgba(38, 220, 255, 0.16), transparent 52%),
-    radial-gradient(circle at 82% 32%, rgba(255, 77, 184, 0.16), transparent 48%),
-    linear-gradient(180deg, #060b1f 0%, #080a17 56%, var(--krg-bg-3) 100%);
+  background: radial-gradient(circle at 16% 10%, rgba(38, 220, 255, 0.24), transparent 50%),
+    radial-gradient(circle at 84% 24%, rgba(255, 77, 184, 0.22), transparent 48%),
+    radial-gradient(circle at 52% 92%, rgba(38, 220, 255, 0.1), transparent 46%),
+    linear-gradient(180deg, #060b1f 0%, #090b1c 42%, #050814 100%);
   color: var(--krg-text);
   font-family: 'Inter', 'PlusJakartaSans', sans-serif;
 }
@@ -1021,10 +1022,10 @@ body::before {
 }
 
 body::after {
-  background: radial-gradient(circle at 18% 22%, rgba(38, 220, 255, 0.12), transparent 44%),
-    radial-gradient(circle at 78% 76%, rgba(255, 77, 184, 0.1), transparent 42%);
-  filter: blur(10px);
-  animation: krgGradientDrift 14s ease-in-out infinite alternate;
+  background: radial-gradient(circle at 14% 28%, rgba(38, 220, 255, 0.2), transparent 46%),
+    radial-gradient(circle at 80% 72%, rgba(255, 77, 184, 0.2), transparent 44%);
+  filter: blur(14px);
+  animation: krgGradientDrift 12s ease-in-out infinite alternate;
 }
 
 .shopify-section,
@@ -1063,9 +1064,9 @@ body::after {
 .banner__box,
 .collapsible-content summary,
 .footer {
-  background: linear-gradient(160deg, rgba(8, 16, 34, 0.88), rgba(16, 12, 36, 0.78));
-  border: 1px solid rgba(38, 220, 255, 0.18);
-  box-shadow: var(--krg-shadow);
+  background: linear-gradient(160deg, rgba(8, 16, 34, 0.84), rgba(16, 12, 36, 0.72));
+  border: 1px solid rgba(38, 220, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.34), 0 0 18px rgba(38, 220, 255, 0.12);
 }
 
 .card,
@@ -1081,8 +1082,8 @@ body::after {
 .banner__box:hover,
 .product__info-container:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 77, 184, 0.52);
-  box-shadow: 0 26px 62px rgba(0, 0, 0, 0.52), 0 0 26px rgba(38, 220, 255, 0.22);
+  border-color: rgba(255, 77, 184, 0.2);
+  box-shadow: 0 26px 62px rgba(0, 0, 0, 0.44), 0 0 24px rgba(38, 220, 255, 0.2);
 }
 
 .hero-banner .banner__heading {
@@ -1171,6 +1172,44 @@ body.template-index .collection-list .collection-list__item {
 body.template-index .collection-list .card-wrapper {
   max-width: 30rem;
   margin-inline: auto;
+}
+
+.cta-idea-rotator {
+  margin-top: 2rem;
+  max-width: 58rem;
+}
+
+.cta-idea-rotator__input {
+  width: 100%;
+  min-height: 5.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(38, 220, 255, 0.28);
+  background: linear-gradient(160deg, rgba(8, 16, 34, 0.9), rgba(16, 12, 36, 0.78));
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  box-shadow: 0 0 16px rgba(38, 220, 255, 0.18);
+  transition: opacity 0.32s ease;
+}
+
+.cta-idea-rotator__input.is-fading {
+  opacity: 0;
+}
+
+.cta-idea-rotator__input.is-reveal {
+  animation: krgInputReveal 0.72s ease;
+}
+
+@keyframes krgInputReveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
 }
 
 p,
@@ -1280,9 +1319,9 @@ a:hover {
 
 @media screen and (max-width: 749px) {
   body {
-    background: radial-gradient(circle at 20% 10%, rgba(38, 220, 255, 0.14), transparent 46%),
-      radial-gradient(circle at 92% 22%, rgba(255, 77, 184, 0.12), transparent 42%),
-      linear-gradient(180deg, #060b1f 0%, #080a17 56%, var(--krg-bg-3) 100%);
+    background: radial-gradient(circle at 18% 10%, rgba(38, 220, 255, 0.2), transparent 44%),
+      radial-gradient(circle at 90% 20%, rgba(255, 77, 184, 0.18), transparent 40%),
+      linear-gradient(180deg, #060b1f 0%, #090b1c 52%, #050814 100%);
   }
 
   .card,
