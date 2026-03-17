@@ -204,77 +204,9 @@
             </div>
         {%- endcase -%}
       {%- endfor -%}
-      {%- if section.settings.custom_class contains 'hero-banner' -%}
-        <div class="hero-ideas" data-hero-ideas-wrapper>
-          <label class="hero-ideas__label" for="HeroIdeas-{{ section.id }}">T-shirt pritns ideas</label>
-          <input
-            id="HeroIdeas-{{ section.id }}"
-            class="hero-ideas__input"
-            type="text"
-            value=""
-            readonly
-            aria-live="polite"
-            aria-label="T-shirt pritns ideas"
-          >
-        </div>
-      {%- endif -%}
     </div>
   </div>
 </div>
-
-{%- if section.settings.custom_class contains 'hero-banner' -%}
-  <script>
-    (function () {
-      const input = document.getElementById('HeroIdeas-{{ section.id }}');
-      if (!input) return;
-
-      const ideas = [
-        'Cyberpunk jellyfish with laser glow',
-        'Retro Tokyo ramen mascot print',
-        'Minimal mountain line art tee',
-        'Neon cat DJ with headphones',
-        'Astronaut surfing a pink wave',
-        'Glitch skull with chrome roses',
-        'Vintage racing tiger emblem',
-        'Y2K butterfly and barcode collage',
-        'Kawaii sushi gang illustration',
-        'Street graffiti dragon lettering',
-        'Abstract geometric sunset horizon',
-        'Samurai mask in synthwave colors',
-        'Lo-fi coffee shop night scene',
-        'Futuristic koi fish motion blur',
-        'Wild west cowboy in neon rain',
-        'Space whale flying over city',
-        'Graffiti smiley in 3D chrome',
-        'Apocalyptic robot with flowers',
-        'Old school tattoo eagle crest',
-        'Japanese wave with digital noise'
-      ];
-
-      const used = new Set();
-      const randomIdea = () => {
-        if (used.size === ideas.length) used.clear();
-        let pick = ideas[Math.floor(Math.random() * ideas.length)];
-        while (used.has(pick)) {
-          pick = ideas[Math.floor(Math.random() * ideas.length)];
-        }
-        used.add(pick);
-        return pick;
-      };
-
-      const swapIdea = () => {
-        input.classList.add('is-fading');
-        window.setTimeout(() => {
-          input.value = randomIdea();
-          input.classList.remove('is-fading');
-        }, 460);
-      };
-
-      input.value = randomIdea();
-      window.setInterval(swapIdea, 2800);
-    })();
-  </script>
-{%- endif -%}
 
 {% schema %}
 {

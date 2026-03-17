@@ -38,8 +38,72 @@
     {% else %}
       <div class="shipping-placeholder">[ Add a world map image ]</div>
     {% endif %}
+
+    <div class="idea-rotator">
+      <input
+        id="WorldIdeas-{{ section.id }}"
+        class="idea-rotator__input"
+        type="text"
+        value=""
+        readonly
+        aria-live="polite"
+        aria-label="T-shirt pritns ideas"
+      >
+    </div>
   </div>
 </section>
+
+<script>
+  (function () {
+    const input = document.getElementById('WorldIdeas-{{ section.id }}');
+    if (!input) return;
+
+    const ideas = [
+      'Cyberpunk jellyfish with laser glow',
+      'Retro Tokyo ramen mascot print',
+      'Minimal mountain line art tee',
+      'Neon cat DJ with headphones',
+      'Astronaut surfing a pink wave',
+      'Glitch skull with chrome roses',
+      'Vintage racing tiger emblem',
+      'Y2K butterfly and barcode collage',
+      'Kawaii sushi gang illustration',
+      'Street graffiti dragon lettering',
+      'Abstract geometric sunset horizon',
+      'Samurai mask in synthwave colors',
+      'Lo-fi coffee shop night scene',
+      'Futuristic koi fish motion blur',
+      'Wild west cowboy in neon rain',
+      'Space whale flying over city',
+      'Graffiti smiley in 3D chrome',
+      'Apocalyptic robot with flowers',
+      'Old school tattoo eagle crest',
+      'Japanese wave with digital noise'
+    ];
+
+    const used = new Set();
+    const randomIdea = () => {
+      if (used.size === ideas.length) used.clear();
+      let pick = ideas[Math.floor(Math.random() * ideas.length)];
+      while (used.has(pick)) {
+        pick = ideas[Math.floor(Math.random() * ideas.length)];
+      }
+      used.add(pick);
+      return pick;
+    };
+
+    const swapIdea = () => {
+      input.classList.add('is-fading');
+      window.setTimeout(() => {
+        input.value = randomIdea();
+        input.classList.remove('is-fading');
+      }, 460);
+    };
+
+    input.value = randomIdea();
+    window.setInterval(swapIdea, 2800);
+  })();
+</script>
 
 <style>
 .worldwide-shipping {
@@ -85,5 +149,31 @@
   align-items: center;
   justify-content: center;
   color: #7A7A7A;
+}
+
+.idea-rotator {
+  margin-top: 2rem;
+  max-width: 58rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.idea-rotator__input {
+  width: 100%;
+  min-height: 5.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(38, 220, 255, 0.35);
+  background: linear-gradient(160deg, rgba(8, 16, 34, 0.92), rgba(16, 12, 36, 0.8));
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  box-shadow: 0 0 16px rgba(38, 220, 255, 0.2);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.idea-rotator__input.is-fading {
+  opacity: 0;
+  transform: translateY(0.4rem);
 }
 </style>

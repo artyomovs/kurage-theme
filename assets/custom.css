@@ -1111,12 +1111,12 @@ body::after {
 }
 
 .hero-banner .banner__buttons .button--primary {
-  background: linear-gradient(135deg, #ff3b30, #ff6b53);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34), 0 0 28px rgba(255, 59, 48, 0.26);
+  background: linear-gradient(135deg, rgba(38, 220, 255, 0.94), rgba(255, 77, 184, 0.92));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34), 0 0 28px rgba(38, 220, 255, 0.24);
 }
 
 .hero-banner .banner__buttons .button--primary::before {
-  background: linear-gradient(125deg, rgba(255, 107, 83, 0.45), rgba(255, 77, 184, 0.35));
+  background: linear-gradient(125deg, rgba(38, 220, 255, 0.45), rgba(255, 77, 184, 0.35));
 }
 
 .button::before,
@@ -1171,39 +1171,6 @@ body.template-index .collection-list .collection-list__item {
 body.template-index .collection-list .card-wrapper {
   max-width: 30rem;
   margin-inline: auto;
-}
-
-.hero-ideas {
-  margin-top: 1.8rem;
-  max-width: 58rem;
-}
-
-.hero-ideas__label {
-  display: block;
-  margin-bottom: 0.6rem;
-  font-size: 1.25rem;
-  line-height: 1.3;
-  color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 0.02em;
-}
-
-.hero-ideas__input {
-  width: 100%;
-  min-height: 5.2rem;
-  border-radius: 999px;
-  border: 1px solid rgba(38, 220, 255, 0.35);
-  background: linear-gradient(160deg, rgba(8, 16, 34, 0.92), rgba(16, 12, 36, 0.8));
-  color: rgba(255, 255, 255, 0.94);
-  font-size: 1.7rem;
-  font-weight: 600;
-  padding: 0.9rem 2rem;
-  box-shadow: 0 0 16px rgba(38, 220, 255, 0.2);
-  transition: opacity 0.45s ease, transform 0.45s ease;
-}
-
-.hero-ideas__input.is-fading {
-  opacity: 0;
-  transform: translateY(0.4rem);
 }
 
 p,
