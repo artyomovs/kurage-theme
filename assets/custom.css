@@ -1188,28 +1188,15 @@ body.template-index .collection-list .card-wrapper {
   color: rgba(255, 255, 255, 0.95);
   font-size: 1.7rem;
   font-weight: 600;
+  letter-spacing: 0.01em;
   padding: 0.9rem 2rem;
   box-shadow: 0 0 16px rgba(38, 220, 255, 0.18);
-  transition: opacity 0.32s ease;
+  transition: box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
-.cta-idea-rotator__input.is-fading {
-  opacity: 0;
-}
-
-.cta-idea-rotator__input.is-reveal {
-  animation: krgInputReveal 0.72s ease;
-}
-
-@keyframes krgInputReveal {
-  0% {
-    clip-path: inset(0 100% 0 0);
-    opacity: 0;
-  }
-  100% {
-    clip-path: inset(0 0 0 0);
-    opacity: 1;
-  }
+.cta-idea-rotator__input.is-typing {
+  border-color: rgba(255, 77, 184, 0.45);
+  box-shadow: 0 0 22px rgba(38, 220, 255, 0.3), 0 0 12px rgba(255, 77, 184, 0.24);
 }
 
 p,
@@ -1235,6 +1222,26 @@ a:hover {
 .grid__item .card,
 .product-grid .card {
   overflow: hidden;
+}
+
+body.template-index .card,
+body.template-index .card__inner,
+body.template-index .multicolumn-card,
+body.template-index .banner__box,
+body.template-index .content-container {
+  background: linear-gradient(165deg, rgba(9, 16, 36, 0.9), rgba(14, 11, 32, 0.88)) !important;
+  border-color: rgba(38, 220, 255, 0.12) !important;
+}
+
+body.template-index .multicolumn-main-wrapper .multicolumn.no-heading .multicolumn-card__info .rte p {
+  font-family: 'PlusJakartaSans', 'Inter', sans-serif;
+  font-size: clamp(1.8rem, 1.4rem + 0.55vw, 2.3rem);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.38;
+  letter-spacing: 0.01em;
+  color: rgba(242, 249, 255, 0.96);
+  text-shadow: 0 0 14px rgba(38, 220, 255, 0.32);
 }
 
 .collection-list .card::after,
