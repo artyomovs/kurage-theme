@@ -1038,6 +1038,22 @@ body::after {
   z-index: 1;
 }
 
+/* ── Seamless background: strip all per-section color-scheme fills so
+      the single body neon gradient shows through without any divides ── */
+.shopify-section .gradient,
+.shopify-section .color-background-1,
+.shopify-section .color-background-2,
+.shopify-section .color-inverse,
+.shopify-section [class*="color-scheme"],
+.multicolumn.gradient,
+.multicolumn[class*="color-"],
+.cta-section .gradient,
+.collection-list.gradient {
+  background: transparent !important;
+  --gradient-background: transparent !important;
+  --color-background: transparent !important;
+}
+
 .header-wrapper,
 .shopify-section-header-sticky {
   background: rgba(6, 10, 26, 0.46);
@@ -1058,7 +1074,6 @@ body::after {
 }
 
 .card,
-.multicolumn-card,
 .product__info-container,
 .slideshow__text.banner__box,
 .banner__box,
@@ -1069,8 +1084,13 @@ body::after {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.34), 0 0 18px rgba(38, 220, 255, 0.12);
 }
 
+.multicolumn-card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
 .card,
-.multicolumn-card,
 .banner__box,
 .product__info-container {
   border-radius: 18px;
@@ -1078,7 +1098,6 @@ body::after {
 }
 
 .card:hover,
-.multicolumn-card:hover,
 .banner__box:hover,
 .product__info-container:hover {
   transform: translateY(-4px);
@@ -1224,13 +1243,11 @@ a:hover {
   overflow: hidden;
 }
 
+/* individual floating cards get a subtle glass surface; section wrappers stay transparent */
 body.template-index .card,
-body.template-index .card__inner,
-body.template-index .multicolumn-card,
-body.template-index .banner__box,
-body.template-index .content-container {
-  background: linear-gradient(165deg, rgba(9, 16, 36, 0.9), rgba(14, 11, 32, 0.88)) !important;
-  border-color: rgba(38, 220, 255, 0.12) !important;
+body.template-index .card__inner {
+  background: linear-gradient(165deg, rgba(9, 16, 36, 0.82), rgba(14, 11, 32, 0.74)) !important;
+  border-color: rgba(38, 220, 255, 0.1) !important;
 }
 
 body.template-index .multicolumn-main-wrapper .multicolumn.no-heading .multicolumn-card__info .rte p {
