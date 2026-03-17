@@ -1,0 +1,89 @@
+{% schema %}
+{
+  "name": "Worldwide Shipping",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Worldwide Shipping, Fast Delivery"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Wherever you are, we’ll bring your favorite AI-designed T-shirts straight to your door. Enjoy global shipping with reliable, speedy delivery you can count on."
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Worldwide Shipping",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="worldwide-shipping">
+  <div class="shipping-container">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.subheading }}</p>
+    {% if section.settings.background_image != blank %}
+      <img src="{{ section.settings.background_image | image_url: width: 1200 }}" alt="Worldwide Shipping">
+    {% else %}
+      <div class="shipping-placeholder">[ Add a world map image ]</div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+.worldwide-shipping {
+  background: #1C1C1C; /* dark background */
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.worldwide-shipping h2 {
+  font-size: 30px;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+.worldwide-shipping p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #B3B3B3;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.worldwide-shipping img {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.shipping-placeholder {
+  width: 100%;
+  height: 300px;
+  background: #323232;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7A7A7A;
+}
+</style>

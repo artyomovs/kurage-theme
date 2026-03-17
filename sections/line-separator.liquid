@@ -1,0 +1,33 @@
+{% schema %}
+{
+  "name": "Line Separator",
+  "settings": [
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "Line color",
+      "default": "#2B2B2B"
+    },
+    {
+      "type": "range",
+      "id": "line_height",
+      "label": "Line height (px)",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Line Separator",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<section 
+  class="line-separator" 
+  style="background: {{ section.settings.line_color }}; height: {{ section.settings.line_height }}px;">
+</section>
