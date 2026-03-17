@@ -1040,6 +1040,17 @@ body::after {
 
 /* ── Seamless background: strip all per-section color-scheme fills so
       the single body neon gradient shows through without any divides ── */
+.shopify-section,
+.shopify-section.gradient,
+.shopify-section.color-background-1,
+.shopify-section.color-background-2,
+.shopify-section.color-inverse,
+.shopify-section[class*="color-"] {
+  background: transparent !important;
+  --gradient-background: transparent !important;
+  --color-background: transparent !important;
+}
+
 .shopify-section .gradient,
 .shopify-section .color-background-1,
 .shopify-section .color-background-2,
