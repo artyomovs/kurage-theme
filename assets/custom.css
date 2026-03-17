@@ -991,10 +991,7 @@ footer .footer__content-bottom .footer__content-bottom-wrapper {
 }
 
 body {
-  background: radial-gradient(circle at 16% 10%, rgba(38, 220, 255, 0.24), transparent 50%),
-    radial-gradient(circle at 84% 24%, rgba(255, 77, 184, 0.22), transparent 48%),
-    radial-gradient(circle at 52% 92%, rgba(38, 220, 255, 0.1), transparent 46%),
-    linear-gradient(180deg, #060b1f 0%, #090b1c 42%, #050814 100%);
+  background: #070d22;
   color: var(--krg-text);
   font-family: 'Inter', 'PlusJakartaSans', sans-serif;
 }
@@ -1013,6 +1010,7 @@ body::after {
   inset: 0;
   pointer-events: none;
   z-index: 0;
+  display: none;
 }
 
 body::before {
@@ -1269,6 +1267,21 @@ body.template-index .collection-list .card-wrapper,
 body.template-index .collection-list .collection-list__item {
   background: transparent !important;
   border: none !important;
+  box-shadow: none !important;
+}
+
+body.template-index .section-collection-list,
+body.template-index .section-collection-list .gradient,
+body.template-index .section-collection-list .collection-list-wrapper,
+body.template-index .section-collection-list .collection-list,
+body.template-index .section-collection-list .grid__item {
+  background: transparent !important;
+}
+
+body.template-index .section-collection-list .card--standard .card__inner:after,
+body.template-index .section-collection-list .card--card:after,
+body.template-index .section-collection-list .card__inner:after {
+  display: none !important;
   box-shadow: none !important;
 }
 
