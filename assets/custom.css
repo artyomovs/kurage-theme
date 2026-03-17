@@ -995,14 +995,14 @@ body {
     radial-gradient(circle at 82% 32%, rgba(255, 77, 184, 0.16), transparent 48%),
     linear-gradient(180deg, #060b1f 0%, #080a17 56%, var(--krg-bg-3) 100%);
   color: var(--krg-text);
-  font-family: 'Sora', 'PlusJakartaSans', sans-serif;
+  font-family: 'Inter', 'PlusJakartaSans', sans-serif;
 }
 
 input,
 textarea,
 select,
 button {
-  font-family: 'Sora', 'PlusJakartaSans', sans-serif;
+  font-family: 'Inter', 'PlusJakartaSans', sans-serif;
 }
 
 body::before,
@@ -1039,8 +1039,8 @@ body::after {
 
 .header-wrapper,
 .shopify-section-header-sticky {
-  background: rgba(6, 10, 26, 0.58);
-  backdrop-filter: blur(16px);
+  background: rgba(6, 10, 26, 0.46);
+  backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(38, 220, 255, 0.3);
 }
 
@@ -1110,6 +1110,15 @@ body::after {
   isolation: isolate;
 }
 
+.hero-banner .banner__buttons .button--primary {
+  background: linear-gradient(135deg, #ff3b30, #ff6b53);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34), 0 0 28px rgba(255, 59, 48, 0.26);
+}
+
+.hero-banner .banner__buttons .button--primary::before {
+  background: linear-gradient(125deg, rgba(255, 107, 83, 0.45), rgba(255, 77, 184, 0.35));
+}
+
 .button::before,
 .button--primary::before,
 .shopify-payment-button__button--unbranded::before,
@@ -1149,9 +1158,52 @@ h4,
 h5,
 h6 {
   color: var(--krg-text);
-  font-family: 'Space Grotesk', var(--font-heading-family), sans-serif;
+  font-family: 'Inter', var(--font-heading-family), sans-serif;
   letter-spacing: 0.03em;
   text-wrap: balance;
+}
+
+body.template-index .collection-list .collection-list__item {
+  max-width: 30rem;
+  margin-inline: auto;
+}
+
+body.template-index .collection-list .card-wrapper {
+  max-width: 30rem;
+  margin-inline: auto;
+}
+
+.hero-ideas {
+  margin-top: 1.8rem;
+  max-width: 58rem;
+}
+
+.hero-ideas__label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.02em;
+}
+
+.hero-ideas__input {
+  width: 100%;
+  min-height: 5.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(38, 220, 255, 0.35);
+  background: linear-gradient(160deg, rgba(8, 16, 34, 0.92), rgba(16, 12, 36, 0.8));
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  box-shadow: 0 0 16px rgba(38, 220, 255, 0.2);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.hero-ideas__input.is-fading {
+  opacity: 0;
+  transform: translateY(0.4rem);
 }
 
 p,
