@@ -976,25 +976,33 @@ footer .footer__content-bottom .footer__content-bottom-wrapper {
 
 /* ===== Kurage Modern Theme Layer (inspired by tmp styles) ===== */
 :root {
-  --krg-bg-1: #070713;
-  --krg-bg-2: #08111d;
-  --krg-bg-3: #05050c;
+  --krg-bg-1: #070a1a;
+  --krg-bg-2: #060b1f;
+  --krg-bg-3: #04060f;
   --krg-surface: rgba(10, 16, 34, 0.64);
   --krg-surface-strong: rgba(255, 255, 255, 0.14);
   --krg-text: rgba(255, 255, 255, 0.92);
   --krg-muted: rgba(255, 255, 255, 0.74);
   --krg-accent: #26dcff;
   --krg-accent-alt: #ff4db8;
-  --krg-accent-warm: #ff3b30;
-  --krg-accent-warm-2: #ff6b53;
+  --krg-accent-warm: #26dcff;
+  --krg-accent-warm-2: #ff4db8;
   --krg-shadow: 0 20px 55px rgba(0, 0, 0, 0.45);
 }
 
 body {
-  background: radial-gradient(circle at 20% 15%, rgba(255, 59, 48, 0.14), transparent 55%),
-    radial-gradient(circle at 90% 50%, rgba(255, 107, 83, 0.14), transparent 55%),
-    linear-gradient(180deg, #05050c 0%, #0b111f 55%, #070713 100%);
+  background: radial-gradient(circle at 18% 12%, rgba(38, 220, 255, 0.16), transparent 52%),
+    radial-gradient(circle at 82% 32%, rgba(255, 77, 184, 0.16), transparent 48%),
+    linear-gradient(180deg, #060b1f 0%, #080a17 56%, var(--krg-bg-3) 100%);
   color: var(--krg-text);
+  font-family: 'Sora', 'PlusJakartaSans', sans-serif;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: 'Sora', 'PlusJakartaSans', sans-serif;
 }
 
 body::before,
@@ -1015,7 +1023,7 @@ body::before {
 body::after {
   background: radial-gradient(circle at 18% 22%, rgba(38, 220, 255, 0.12), transparent 44%),
     radial-gradient(circle at 78% 76%, rgba(255, 77, 184, 0.1), transparent 42%);
-  filter: blur(6px);
+  filter: blur(10px);
   animation: krgGradientDrift 14s ease-in-out infinite alternate;
 }
 
@@ -1031,9 +1039,9 @@ body::after {
 
 .header-wrapper,
 .shopify-section-header-sticky {
-  background: rgba(7, 10, 24, 0.72);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 107, 83, 0.3);
+  background: rgba(6, 10, 26, 0.58);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(38, 220, 255, 0.3);
 }
 
 .header__menu-item,
@@ -1044,7 +1052,7 @@ body::after {
 }
 
 .announcement-bar {
-  background: linear-gradient(120deg, rgba(255, 59, 48, 0.28), rgba(255, 107, 83, 0.24));
+  background: linear-gradient(120deg, rgba(38, 220, 255, 0.26), rgba(255, 77, 184, 0.24));
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
@@ -1073,16 +1081,16 @@ body::after {
 .banner__box:hover,
 .product__info-container:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 107, 83, 0.48);
-  box-shadow: 0 26px 62px rgba(0, 0, 0, 0.52);
+  border-color: rgba(255, 77, 184, 0.52);
+  box-shadow: 0 26px 62px rgba(0, 0, 0, 0.52), 0 0 26px rgba(38, 220, 255, 0.22);
 }
 
 .hero-banner .banner__heading {
-  background: linear-gradient(140deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 136, 110, 0.95) 65%, rgba(255, 59, 48, 0.92) 100%);
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.98) 0%, rgba(38, 220, 255, 0.95) 55%, rgba(255, 77, 184, 0.9) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: 0 0 18px rgba(255, 107, 83, 0.36);
+  text-shadow: 0 0 18px rgba(38, 220, 255, 0.36);
 }
 
 .hero-banner .banner__content {
@@ -1094,10 +1102,10 @@ body::after {
 .shopify-payment-button__button--unbranded,
 .cart__checkout-button,
 .quick-add__submit {
-  background: linear-gradient(135deg, rgba(255, 59, 48, 0.94), rgba(255, 107, 83, 0.92));
+  background: linear-gradient(135deg, rgba(38, 220, 255, 0.94), rgba(255, 77, 184, 0.92));
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.28);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34), 0 0 28px rgba(255, 59, 48, 0.24);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34), 0 0 28px rgba(38, 220, 255, 0.24);
   position: relative;
   isolation: isolate;
 }
@@ -1141,6 +1149,7 @@ h4,
 h5,
 h6 {
   color: var(--krg-text);
+  font-family: 'Space Grotesk', var(--font-heading-family), sans-serif;
   letter-spacing: 0.03em;
   text-wrap: balance;
 }
@@ -1252,9 +1261,9 @@ a:hover {
 
 @media screen and (max-width: 749px) {
   body {
-    background: radial-gradient(circle at 20% 10%, rgba(255, 59, 48, 0.14), transparent 46%),
-      radial-gradient(circle at 92% 22%, rgba(255, 107, 83, 0.12), transparent 42%),
-      linear-gradient(180deg, #05050c 0%, #0b111f 55%, #070713 100%);
+    background: radial-gradient(circle at 20% 10%, rgba(38, 220, 255, 0.14), transparent 46%),
+      radial-gradient(circle at 92% 22%, rgba(255, 77, 184, 0.12), transparent 42%),
+      linear-gradient(180deg, #060b1f 0%, #080a17 56%, var(--krg-bg-3) 100%);
   }
 
   .card,
