@@ -43,22 +43,47 @@
 
 <style>
 .worldwide-shipping {
-  background: #1C1C1C; /* dark background */
   padding: 4rem 2rem;
   text-align: center;
   color: #FFFFFF;
-  border-radius: 16px;
   margin: 2rem auto;
-  max-width: 1200px;
+  max-width: 1260px;
+}
+
+.shipping-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 3.6rem 2rem 3rem;
+  border-radius: 24px;
+  background: linear-gradient(155deg, rgba(7, 13, 34, 0.84), rgba(20, 12, 42, 0.7));
+  border: 1px solid rgba(92, 224, 255, 0.16);
+  box-shadow: 0 24px 58px rgba(0, 0, 0, 0.42), 0 0 30px rgba(38, 220, 255, 0.15);
+  animation: krgShipReveal 0.85s ease both;
+}
+
+.shipping-container::before {
+  content: "";
+  position: absolute;
+  inset: -20% -15%;
+  background: radial-gradient(circle at 20% 20%, rgba(38, 220, 255, 0.16), transparent 42%),
+    radial-gradient(circle at 85% 75%, rgba(255, 77, 184, 0.14), transparent 45%);
+  pointer-events: none;
+  animation: krgShipGlow 10s ease-in-out infinite alternate;
 }
 
 .worldwide-shipping h2 {
+  position: relative;
+  z-index: 1;
   font-size: 30px;
   font-weight: 100;
   margin-bottom: 1rem;
 }
 
 .worldwide-shipping p {
+  position: relative;
+  z-index: 1;
   font-size: 18px;
   line-height: 1.6;
   color: #B3B3B3;
@@ -69,14 +94,19 @@
 }
 
 .worldwide-shipping img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
   display: block;
   border-radius: 12px;
+  animation: krgMapFloat 8.5s ease-in-out infinite alternate;
 }
 
 .shipping-placeholder {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 300px;
   background: #323232;
@@ -85,5 +115,49 @@
   align-items: center;
   justify-content: center;
   color: #7A7A7A;
+}
+
+@keyframes krgShipReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes krgShipGlow {
+  0% {
+    transform: translate3d(-1.2%, -1.2%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(1.2%, 1.2%, 0) scale(1.04);
+  }
+}
+
+@keyframes krgMapFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-7px);
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .shipping-container {
+    padding: 2.4rem 1.2rem 2rem;
+    border-radius: 18px;
+  }
+
+  .worldwide-shipping h2 {
+    font-size: 25px;
+  }
+
+  .worldwide-shipping p {
+    font-size: 16px;
+  }
 }
 </style>
