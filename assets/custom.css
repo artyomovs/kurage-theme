@@ -1135,6 +1135,22 @@ body::after {
   animation: krgHeroLift 0.9s ease-out both;
 }
 
+body.template-index .hero-banner.banner {
+  max-width: min(1240px, calc(100% - 3.2rem));
+  margin: 2.2rem auto 1.4rem;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.42), 0 0 24px rgba(38, 220, 255, 0.2);
+}
+
+body.template-index .hero-banner .banner__media {
+  animation: krgHeroMediaFloat 9.5s ease-in-out infinite alternate;
+}
+
+body.template-index .hero-banner .banner__media img {
+  animation: krgHeroImageScale 13s ease-in-out infinite alternate;
+}
+
 .button,
 .button--primary,
 .shopify-payment-button__button--unbranded,
@@ -1285,6 +1301,19 @@ body.template-index .section-collection-list .card__inner:after {
   box-shadow: none !important;
 }
 
+body.template-index .multicolumn-main-wrapper .multicolumn-card.content-container,
+body.template-index .multicolumn-main-wrapper .multicolumn-card,
+body.template-index .multicolumn-main-wrapper .content-container,
+body.template-index .section-collection-list .content-container,
+body.template-index .section-collection-list .card__inner,
+body.template-index .section-collection-list .collection-card-wrapper,
+body.template-index .section-collection-list .card,
+body.template-index .section-collection-list .card__content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 body.template-index .multicolumn-main-wrapper .multicolumn.no-heading .multicolumn-card__info .rte p {
   font-family: 'PlusJakartaSans', 'Inter', sans-serif;
   font-size: clamp(1.8rem, 1.4rem + 0.55vw, 2.3rem);
@@ -1343,6 +1372,24 @@ body.template-index .multicolumn-main-wrapper .multicolumn.no-heading .multicolu
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes krgHeroMediaFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes krgHeroImageScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.035);
   }
 }
 
