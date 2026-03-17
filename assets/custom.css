@@ -973,3 +973,361 @@ footer .footer__content-bottom .footer__content-bottom-wrapper {
     font-size: 28px;
   }
 }
+
+/* ===== Kurage Modern Theme Layer (inspired by tmp styles) ===== */
+:root {
+  --krg-bg-1: #070a1a;
+  --krg-bg-2: #060b1f;
+  --krg-bg-3: #04060f;
+  --krg-surface: rgba(10, 16, 34, 0.64);
+  --krg-surface-strong: rgba(255, 255, 255, 0.14);
+  --krg-text: rgba(255, 255, 255, 0.92);
+  --krg-muted: rgba(255, 255, 255, 0.74);
+  --krg-accent: #26dcff;
+  --krg-accent-alt: #ff4db8;
+  --krg-accent-warm: #26dcff;
+  --krg-accent-warm-2: #ff4db8;
+  --krg-shadow: 0 20px 55px rgba(0, 0, 0, 0.45);
+}
+
+body {
+  background: radial-gradient(circle at 16% 10%, rgba(38, 220, 255, 0.24), transparent 50%),
+    radial-gradient(circle at 84% 24%, rgba(255, 77, 184, 0.22), transparent 48%),
+    radial-gradient(circle at 52% 92%, rgba(38, 220, 255, 0.1), transparent 46%),
+    linear-gradient(180deg, #060b1f 0%, #090b1c 42%, #050814 100%);
+  color: var(--krg-text);
+  font-family: 'Inter', 'PlusJakartaSans', sans-serif;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: 'Inter', 'PlusJakartaSans', sans-serif;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  background: linear-gradient(115deg, transparent 28%, rgba(38, 220, 255, 0.09) 47%, rgba(255, 77, 184, 0.1) 56%, transparent 75%);
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
+
+body::after {
+  background: radial-gradient(circle at 14% 28%, rgba(38, 220, 255, 0.2), transparent 46%),
+    radial-gradient(circle at 80% 72%, rgba(255, 77, 184, 0.2), transparent 44%);
+  filter: blur(14px);
+  animation: krgGradientDrift 12s ease-in-out infinite alternate;
+}
+
+.shopify-section,
+.gradient,
+.color-background-1,
+.color-background-2,
+.color-inverse,
+.section-header {
+  position: relative;
+  z-index: 1;
+}
+
+.header-wrapper,
+.shopify-section-header-sticky {
+  background: rgba(6, 10, 26, 0.46);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(38, 220, 255, 0.3);
+}
+
+.header__menu-item,
+.header__icon,
+.header__active-menu-item,
+.list-menu__item {
+  color: var(--krg-text);
+}
+
+.announcement-bar {
+  background: linear-gradient(120deg, rgba(38, 220, 255, 0.26), rgba(255, 77, 184, 0.24));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.card,
+.multicolumn-card,
+.product__info-container,
+.slideshow__text.banner__box,
+.banner__box,
+.collapsible-content summary,
+.footer {
+  background: linear-gradient(160deg, rgba(8, 16, 34, 0.84), rgba(16, 12, 36, 0.72));
+  border: 1px solid rgba(38, 220, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.34), 0 0 18px rgba(38, 220, 255, 0.12);
+}
+
+.card,
+.multicolumn-card,
+.banner__box,
+.product__info-container {
+  border-radius: 18px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.card:hover,
+.multicolumn-card:hover,
+.banner__box:hover,
+.product__info-container:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 77, 184, 0.2);
+  box-shadow: 0 26px 62px rgba(0, 0, 0, 0.44), 0 0 24px rgba(38, 220, 255, 0.2);
+}
+
+.hero-banner .banner__heading {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.98) 0%, rgba(38, 220, 255, 0.95) 55%, rgba(255, 77, 184, 0.9) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 18px rgba(38, 220, 255, 0.36);
+}
+
+.hero-banner .banner__content {
+  animation: krgHeroLift 0.9s ease-out both;
+}
+
+.button,
+.button--primary,
+.shopify-payment-button__button--unbranded,
+.cart__checkout-button,
+.quick-add__submit {
+  background: linear-gradient(135deg, rgba(38, 220, 255, 0.94), rgba(255, 77, 184, 0.92));
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34), 0 0 28px rgba(38, 220, 255, 0.24);
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-banner .banner__buttons .button--primary {
+  background: linear-gradient(135deg, rgba(38, 220, 255, 0.94), rgba(255, 77, 184, 0.92));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34), 0 0 28px rgba(38, 220, 255, 0.24);
+}
+
+.hero-banner .banner__buttons .button--primary::before {
+  background: linear-gradient(125deg, rgba(38, 220, 255, 0.45), rgba(255, 77, 184, 0.35));
+}
+
+.button::before,
+.button--primary::before,
+.shopify-payment-button__button--unbranded::before,
+.cart__checkout-button::before,
+.quick-add__submit::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(125deg, rgba(38, 220, 255, 0.45), rgba(255, 77, 184, 0.35));
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.35s ease;
+}
+
+.button:hover,
+.button--primary:hover,
+.shopify-payment-button__button--unbranded:hover,
+.cart__checkout-button:hover,
+.quick-add__submit:hover {
+  filter: saturate(1.08) brightness(1.04);
+  transform: translateY(-1px);
+}
+
+.button:hover::before,
+.button--primary:hover::before,
+.shopify-payment-button__button--unbranded:hover::before,
+.cart__checkout-button:hover::before,
+.quick-add__submit:hover::before {
+  opacity: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--krg-text);
+  font-family: 'Inter', var(--font-heading-family), sans-serif;
+  letter-spacing: 0.03em;
+  text-wrap: balance;
+}
+
+body.template-index .collection-list .collection-list__item {
+  max-width: 30rem;
+  margin-inline: auto;
+}
+
+body.template-index .collection-list .card-wrapper {
+  max-width: 30rem;
+  margin-inline: auto;
+}
+
+.cta-idea-rotator {
+  margin-top: 2rem;
+  max-width: 58rem;
+}
+
+.cta-idea-rotator__input {
+  width: 100%;
+  min-height: 5.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(38, 220, 255, 0.28);
+  background: linear-gradient(160deg, rgba(8, 16, 34, 0.9), rgba(16, 12, 36, 0.78));
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  box-shadow: 0 0 16px rgba(38, 220, 255, 0.18);
+  transition: opacity 0.32s ease;
+}
+
+.cta-idea-rotator__input.is-fading {
+  opacity: 0;
+}
+
+.cta-idea-rotator__input.is-reveal {
+  animation: krgInputReveal 0.72s ease;
+}
+
+@keyframes krgInputReveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+p,
+.rte,
+.caption,
+.product__text,
+.price,
+.footer-block__details-content,
+.copyright__content {
+  color: var(--krg-muted);
+}
+
+a {
+  color: rgba(104, 234, 255, 0.96);
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: #ffd5ef;
+}
+
+.collection-list .card,
+.grid__item .card,
+.product-grid .card {
+  overflow: hidden;
+}
+
+.collection-list .card::after,
+.grid__item .card::after,
+.product-grid .card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent 25%, rgba(38, 220, 255, 0.14) 48%, transparent 72%);
+  transform: translateX(-100%);
+  transition: transform 0.8s ease;
+}
+
+.collection-list .card:hover::after,
+.grid__item .card:hover::after,
+.product-grid .card:hover::after {
+  transform: translateX(100%);
+}
+
+.shopify-section {
+  animation: krgFadeUp 0.72s ease both;
+}
+
+.shopify-section:nth-of-type(2n) {
+  animation-delay: 0.08s;
+}
+
+.shopify-section:nth-of-type(3n) {
+  animation-delay: 0.14s;
+}
+
+@keyframes krgFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes krgHeroLift {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes krgGradientDrift {
+  0% {
+    transform: translate3d(-1.5%, -1%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(1.5%, 1%, 0) scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::after,
+  .shopify-section,
+  .hero-banner .banner__content,
+  .card,
+  .multicolumn-card,
+  .banner__box,
+  .product__info-container,
+  .button,
+  .button--primary,
+  .collection-list .card::after,
+  .grid__item .card::after,
+  .product-grid .card::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  body {
+    background: radial-gradient(circle at 18% 10%, rgba(38, 220, 255, 0.2), transparent 44%),
+      radial-gradient(circle at 90% 20%, rgba(255, 77, 184, 0.18), transparent 40%),
+      linear-gradient(180deg, #060b1f 0%, #090b1c 52%, #050814 100%);
+  }
+
+  .card,
+  .multicolumn-card,
+  .banner__box,
+  .product__info-container {
+    border-radius: 14px;
+  }
+}
