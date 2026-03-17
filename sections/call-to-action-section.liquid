@@ -79,23 +79,39 @@
       return pick;
     };
 
-    const reveal = () => {
-      input.classList.add('is-reveal');
-      window.setTimeout(() => input.classList.remove('is-reveal'), 760);
+    const sleep = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
+
+    const eraseText = async () => {
+      while (input.value.length > 0) {
+        input.value = input.value.slice(0, -1);
+        await sleep(24);
+      }
     };
 
-    const swapIdea = () => {
-      input.classList.add('is-fading');
-      window.setTimeout(() => {
-        input.value = randomIdea();
-        input.classList.remove('is-fading');
-        reveal();
-      }, 360);
+    const typeText = async (text) => {
+      input.classList.add('is-typing');
+      input.value = '';
+      for (const char of text) {
+        input.value += char;
+        await sleep(22);
+      }
+      window.setTimeout(() => input.classList.remove('is-typing'), 140);
     };
 
-    input.value = randomIdea();
-    reveal();
-    window.setInterval(swapIdea, 2900);
+    const cycleIdeas = async () => {
+      input.value = randomIdea();
+      input.classList.add('is-typing');
+      window.setTimeout(() => input.classList.remove('is-typing'), 180);
+
+      while (true) {
+        await sleep(1900);
+        await eraseText();
+        await sleep(180);
+        await typeText(randomIdea());
+      }
+    };
+
+    cycleIdeas();
   })();
 </script>
 
