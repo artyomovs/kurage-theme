@@ -973,3 +973,229 @@ footer .footer__content-bottom .footer__content-bottom-wrapper {
     font-size: 28px;
   }
 }
+
+/* ===== Kurage Modern Theme Layer (inspired by tmp styles) ===== */
+:root {
+  --krg-bg-1: #070713;
+  --krg-bg-2: #08111d;
+  --krg-bg-3: #05050c;
+  --krg-surface: rgba(10, 16, 34, 0.62);
+  --krg-surface-strong: rgba(255, 255, 255, 0.12);
+  --krg-text: rgba(255, 255, 255, 0.92);
+  --krg-muted: rgba(255, 255, 255, 0.72);
+  --krg-accent: #26dcff;
+  --krg-accent-alt: #ff4db8;
+  --krg-accent-warm: #ff3b30;
+  --krg-shadow: 0 20px 55px rgba(0, 0, 0, 0.45);
+}
+
+body {
+  background: radial-gradient(circle at 18% 12%, rgba(38, 220, 255, 0.15), transparent 52%),
+    radial-gradient(circle at 82% 32%, rgba(255, 77, 184, 0.15), transparent 48%),
+    linear-gradient(180deg, #060b1f 0%, #080a17 56%, var(--krg-bg-1) 100%);
+  color: var(--krg-text);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 28%,
+    rgba(38, 220, 255, 0.09) 47%,
+    rgba(255, 77, 184, 0.1) 56%,
+    transparent 75%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.shopify-section,
+.gradient,
+.color-background-1,
+.color-background-2,
+.color-inverse,
+.section-header {
+  position: relative;
+  z-index: 1;
+}
+
+.header-wrapper,
+.shopify-section-header-sticky {
+  background: rgba(7, 10, 24, 0.72);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(38, 220, 255, 0.18);
+}
+
+.header__menu-item,
+.header__icon,
+.header__active-menu-item,
+.list-menu__item {
+  color: var(--krg-text);
+}
+
+.announcement-bar {
+  background: linear-gradient(120deg, rgba(38, 220, 255, 0.22), rgba(255, 77, 184, 0.2));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card,
+.multicolumn-card,
+.product__info-container,
+.slideshow__text.banner__box,
+.banner__box,
+.collapsible-content summary,
+.footer {
+  background: linear-gradient(160deg, rgba(8, 16, 34, 0.86), rgba(16, 12, 36, 0.76));
+  border: 1px solid rgba(38, 220, 255, 0.18);
+  box-shadow: var(--krg-shadow);
+}
+
+.card,
+.multicolumn-card,
+.banner__box,
+.product__info-container {
+  border-radius: 18px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.card:hover,
+.multicolumn-card:hover,
+.banner__box:hover,
+.product__info-container:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 77, 184, 0.38);
+  box-shadow: 0 26px 62px rgba(0, 0, 0, 0.52);
+}
+
+.button,
+.button--primary,
+.shopify-payment-button__button--unbranded,
+.cart__checkout-button,
+.quick-add__submit {
+  background: linear-gradient(135deg, rgba(38, 220, 255, 0.92), rgba(255, 77, 184, 0.9));
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.32);
+}
+
+.button:hover,
+.button--primary:hover,
+.shopify-payment-button__button--unbranded:hover,
+.cart__checkout-button:hover,
+.quick-add__submit:hover {
+  filter: saturate(1.08) brightness(1.04);
+  transform: translateY(-1px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--krg-text);
+  letter-spacing: 0.03em;
+  text-wrap: balance;
+}
+
+p,
+.rte,
+.caption,
+.product__text,
+.price,
+.footer-block__details-content,
+.copyright__content {
+  color: var(--krg-muted);
+}
+
+a {
+  color: rgba(104, 234, 255, 0.96);
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: #ffd5ef;
+}
+
+.collection-list .card,
+.grid__item .card,
+.product-grid .card {
+  overflow: hidden;
+}
+
+.collection-list .card::after,
+.grid__item .card::after,
+.product-grid .card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent 25%, rgba(38, 220, 255, 0.1) 48%, transparent 72%);
+  transform: translateX(-100%);
+  transition: transform 0.8s ease;
+}
+
+.collection-list .card:hover::after,
+.grid__item .card:hover::after,
+.product-grid .card:hover::after {
+  transform: translateX(100%);
+}
+
+.shopify-section {
+  animation: krgFadeUp 0.7s ease both;
+}
+
+.shopify-section:nth-of-type(2n) {
+  animation-delay: 0.08s;
+}
+
+.shopify-section:nth-of-type(3n) {
+  animation-delay: 0.14s;
+}
+
+@keyframes krgFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shopify-section,
+  .card,
+  .multicolumn-card,
+  .banner__box,
+  .product__info-container,
+  .button,
+  .button--primary,
+  .collection-list .card::after,
+  .grid__item .card::after,
+  .product-grid .card::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  body {
+    background: radial-gradient(circle at 20% 10%, rgba(38, 220, 255, 0.12), transparent 46%),
+      radial-gradient(circle at 92% 22%, rgba(255, 77, 184, 0.12), transparent 42%),
+      linear-gradient(180deg, #060b1f 0%, #080a17 56%, var(--krg-bg-1) 100%);
+  }
+
+  .card,
+  .multicolumn-card,
+  .banner__box,
+  .product__info-container {
+    border-radius: 14px;
+  }
+}
