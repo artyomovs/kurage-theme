@@ -1073,12 +1073,19 @@ body::after {
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.card,
 .product__info-container,
 .slideshow__text.banner__box,
 .banner__box,
 .collapsible-content summary,
 .footer {
+  background: linear-gradient(160deg, rgba(8, 16, 34, 0.84), rgba(16, 12, 36, 0.72));
+  border: 1px solid rgba(38, 220, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.34), 0 0 18px rgba(38, 220, 255, 0.12);
+}
+
+/* product cards in grids keep a subtle glass surface */
+.product-grid .card,
+.grid__item .card {
   background: linear-gradient(160deg, rgba(8, 16, 34, 0.84), rgba(16, 12, 36, 0.72));
   border: 1px solid rgba(38, 220, 255, 0.08);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.34), 0 0 18px rgba(38, 220, 255, 0.12);
@@ -1090,14 +1097,16 @@ body::after {
   box-shadow: none;
 }
 
-.card,
+.product-grid .card,
+.grid__item .card,
 .banner__box,
 .product__info-container {
   border-radius: 18px;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
-.card:hover,
+.product-grid .card:hover,
+.grid__item .card:hover,
 .banner__box:hover,
 .product__info-container:hover {
   transform: translateY(-4px);
@@ -1237,17 +1246,19 @@ a:hover {
   color: #ffd5ef;
 }
 
-.collection-list .card,
 .grid__item .card,
 .product-grid .card {
   overflow: hidden;
 }
 
-/* individual floating cards get a subtle glass surface; section wrappers stay transparent */
-body.template-index .card,
-body.template-index .card__inner {
-  background: linear-gradient(165deg, rgba(9, 16, 36, 0.82), rgba(14, 11, 32, 0.74)) !important;
-  border-color: rgba(38, 220, 255, 0.1) !important;
+/* collection-list cards: fully transparent so body gradient shows through */
+body.template-index .collection-list .card,
+body.template-index .collection-list .card__inner,
+body.template-index .collection-list .card-wrapper,
+body.template-index .collection-list .collection-list__item {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 body.template-index .multicolumn-main-wrapper .multicolumn.no-heading .multicolumn-card__info .rte p {
@@ -1261,7 +1272,6 @@ body.template-index .multicolumn-main-wrapper .multicolumn.no-heading .multicolu
   text-shadow: 0 0 14px rgba(38, 220, 255, 0.32);
 }
 
-.collection-list .card::after,
 .grid__item .card::after,
 .product-grid .card::after {
   content: "";
@@ -1273,7 +1283,6 @@ body.template-index .multicolumn-main-wrapper .multicolumn.no-heading .multicolu
   transition: transform 0.8s ease;
 }
 
-.collection-list .card:hover::after,
 .grid__item .card:hover::after,
 .product-grid .card:hover::after {
   transform: translateX(100%);
