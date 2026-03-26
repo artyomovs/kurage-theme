@@ -193,8 +193,41 @@
                 </p>
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
+                  {%- liquid
+                    assign concise_description = product.description | strip_html | strip | truncatewords: 24, '...'
+                    assign size_option_index = -1
+
+                    for option in product.options_with_values
+                      if option.name | downcase contains 'size'
+                        assign size_option_index = forloop.index0
+                        break
+                      endif
+                    endfor
+
+                    assign size_tokens = '|'
+                    if size_option_index >= 0
+                      for variant in product.variants
+                        assign size_value = variant.options[size_option_index] | strip
+                        assign size_token = '|' | append: size_value | append: '|'
+                        unless size_value == blank or size_tokens contains size_token
+                          assign size_tokens = size_tokens | append: size_value | append: '|'
+                        endunless
+                      endfor
+                    endif
+
+                    assign size_summary = size_tokens | remove_first: '|' | remove_last: '|' | replace: '|', ', '
+                  -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
+                    <p><strong>Product details</strong></p>
+                    <p>{{ concise_description }}</p>
+                    <p>
+                      <strong>Size matrix:</strong>
+                      {%- if size_summary != blank -%}
+                        {{ size_summary }}
+                      {%- else -%}
+                        True-to-size fit. Choose your regular size for a classic look.
+                      {%- endif -%}
+                    </p>
                   </div>
                 {%- endif -%}
               {%- when 'sku' -%}
