@@ -24,26 +24,6 @@ product-info {
   margin: 0 auto;
 }
 
-.product__media-wrapper .global-media-settings {
-  border: 0;
-  background-color: transparent;
-}
-
-.product__media-wrapper .global-media-settings:after {
-  content: none;
-}
-
-.product__media-wrapper .product__media,
-.product__media-wrapper .media,
-.product__media-wrapper .product-media-container {
-  background: transparent;
-}
-
-.product__info-container {
-  border: 0;
-  background: transparent;
-}
-
 .product__description p {
   margin: 0.7rem 0;
 }
@@ -134,21 +114,7 @@ product-info {
 
 @media screen and (max-width: 749px) {
   .product__media-wrapper .product-media-container {
-    max-width: 30rem;
-  }
-
-  .product__media-list {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .product__media-list .product__media-item {
-    width: min(85vw, 30rem);
+    max-width: 34rem;
   }
 }
 
@@ -174,17 +140,6 @@ product-info {
   }
 }
 
-@keyframes productContentReveal {
-  from {
-    opacity: 0;
-    transform: translateY(0.8rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .product__media-wrapper .product__media-item.is-active .product-media-container {
   animation: productMediaReveal 480ms ease-out;
 }
@@ -193,20 +148,9 @@ product-info {
   animation: productInfoReveal 420ms ease-out;
 }
 
-.product__info-container > * {
-  animation: productContentReveal 480ms ease-out both;
-}
-
-.product__info-container > *:nth-child(1) { animation-delay: 70ms; }
-.product__info-container > *:nth-child(2) { animation-delay: 120ms; }
-.product__info-container > *:nth-child(3) { animation-delay: 170ms; }
-.product__info-container > *:nth-child(4) { animation-delay: 220ms; }
-.product__info-container > *:nth-child(5) { animation-delay: 270ms; }
-
 @media (prefers-reduced-motion: reduce) {
   .product__media-wrapper .product__media-item.is-active .product-media-container,
-  .product__info-wrapper,
-  .product__info-container > * {
+  .product__info-wrapper {
     animation: none;
   }
 }
@@ -1612,31 +1556,5 @@ a.product__text {
 
   .recipient-form > input[type='checkbox']:checked + label .icon-checkmark {
     border: none;
-  }
-}
-
-/* Product page polish overrides */
-.product .product__media-wrapper .global-media-settings {
-  border: 0 !important;
-  background-color: transparent !important;
-}
-
-.product .product__media-wrapper .global-media-settings:after {
-  content: none !important;
-}
-
-@media screen and (max-width: 749px) {
-  .product .product__media-list {
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
-
-  .product .product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  .product .product__media-list .product__media-item {
-    width: min(85vw, 30rem) !important;
   }
 }
