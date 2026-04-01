@@ -1494,8 +1494,71 @@ body.template-product .product__info-container .product-form__input {
   }
 
   body.template-product .product__info-wrapper {
-    padding-left: 1.6rem !important;
-    padding-right: 1.6rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body.template-product .product__info-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 2.1rem 1.6rem 2.4rem !important;
+    border: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: linear-gradient(180deg, rgba(5, 12, 38, 0.84), rgba(5, 11, 35, 0.76)) !important;
+    animation: krgProductPanelSlideIn 540ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  body.template-product .product__info-container > * {
+    animation: krgProductPanelItemIn 460ms ease-out both;
+  }
+
+  body.template-product .product__info-container > *:nth-child(1) { animation-delay: 70ms; }
+  body.template-product .product__info-container > *:nth-child(2) { animation-delay: 110ms; }
+  body.template-product .product__info-container > *:nth-child(3) { animation-delay: 150ms; }
+  body.template-product .product__info-container > *:nth-child(4) { animation-delay: 190ms; }
+  body.template-product .product__info-container > *:nth-child(5) { animation-delay: 230ms; }
+
+  body.template-product .product__title {
+    margin-top: 0.9rem !important;
+    margin-bottom: 1.4rem !important;
+  }
+
+  body.template-product .product__title h1 {
+    line-height: 1.08;
+  }
+}
+
+@keyframes krgProductPanelSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes krgProductPanelItemIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.9rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.template-product .product__info-container,
+  body.template-product .product__info-container > * {
+    animation: none !important;
   }
 }
 
