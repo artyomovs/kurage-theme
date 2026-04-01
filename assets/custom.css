@@ -1641,3 +1641,67 @@ body.template-product .product__media-wrapper .product__media-item.is-active .pr
     animation: none !important;
   }
 }
+
+/* Strong mobile override for main product section (works even if body template classes differ) */
+@media screen and (max-width: 749px) {
+  .product-deatil-sec .page-width {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .product-deatil-sec .product,
+  .product-deatil-sec .product.grid,
+  .product-deatil-sec .product__info-wrapper,
+  .product-deatil-sec .grid__item.product__info-wrapper,
+  .product-deatil-sec [id^='ProductInfo-'] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .product-deatil-sec .product__info-wrapper,
+  .product-deatil-sec .grid__item.product__info-wrapper {
+    padding: 0 !important;
+  }
+
+  .product-deatil-sec .product__info-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 2.6rem 1.6rem 2.4rem !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    background: linear-gradient(180deg, rgba(5, 12, 38, 0.9), rgba(4, 10, 32, 0.84)) !important;
+    animation: krgProductPanelSlideIn 540ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .product-deatil-sec .product__title {
+    margin-top: 1rem !important;
+    margin-bottom: 1.6rem !important;
+  }
+
+  .product-deatil-sec .product__title h1 {
+    line-height: 1.08 !important;
+  }
+
+  .product-deatil-sec .product__info-container > * {
+    animation: krgProductPanelItemIn 460ms ease-out both;
+  }
+
+  .product-deatil-sec .product__info-container > *:nth-child(1) { animation-delay: 70ms; }
+  .product-deatil-sec .product__info-container > *:nth-child(2) { animation-delay: 110ms; }
+  .product-deatil-sec .product__info-container > *:nth-child(3) { animation-delay: 150ms; }
+  .product-deatil-sec .product__info-container > *:nth-child(4) { animation-delay: 190ms; }
+  .product-deatil-sec .product__info-container > *:nth-child(5) { animation-delay: 230ms; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-deatil-sec .product__info-container,
+  .product-deatil-sec .product__info-container > * {
+    animation: none !important;
+  }
+}
