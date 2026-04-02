@@ -1333,6 +1333,28 @@ body.template-index .multicolumn-main-wrapper .multicolumn-card__info {
   box-shadow: none !important;
 }
 
+body.template-index .multicolumn-main-wrapper .page-width,
+body.template-index .multicolumn-main-wrapper .multicolumn,
+body.template-index .multicolumn-main-wrapper .multicolumn-list {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.template-index .multicolumn-main-wrapper .multicolumn-list {
+  gap: 0 !important;
+}
+
+body.template-index .multicolumn-main-wrapper .multicolumn-list__item {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.template-index .multicolumn-main-wrapper .multicolumn-card__info {
+  padding: 2.2rem 1.4rem !important;
+}
+
 body.template-index .multicolumn-main-wrapper .multicolumn.no-heading .multicolumn-card__info .rte p {
   font-family: 'PlusJakartaSans', 'Inter', sans-serif;
   font-size: clamp(1.8rem, 1.4rem + 0.55vw, 2.3rem);

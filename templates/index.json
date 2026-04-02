@@ -104,7 +104,7 @@
       ],
       "custom_css": [
         "p {text-shadow: 0 0 8px rgba(220, 38, 38, 0.34); color: #eee;}",
-        "a.button {background: linear-gradient(#dc2626, #ef4444, #26dcff); box-shadow: 0 0 16px rgba(220, 38, 38, 0.34);}",
+        "a.button {background: linear-gradient(135deg, rgba(220, 38, 38, 0.95), rgba(239, 68, 68, 0.92), rgba(38, 220, 255, 0.88)) !important; border: 1px solid rgba(255, 255, 255, 0.28) !important; color: #fff !important; border-radius: 40px !important; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34), 0 0 24px rgba(220, 38, 38, 0.24) !important;}",
         "a.button:hover {transform: scale(1.06); box-shadow: 0 0 26px rgba(255, 77, 184, 0.52);}"
       ],
       "name": "Multicolumn With Icon",
