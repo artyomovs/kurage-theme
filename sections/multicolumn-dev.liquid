@@ -14,6 +14,54 @@
        padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
      }
   }
+
+  /* Force seamless full-width step block without inner seams */
+  .section-{{ section.id }}-padding {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .section-{{ section.id }}-padding .slider-mobile-gutter,
+  .section-{{ section.id }}-padding .multicolumn-list {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  .section-{{ section.id }}-padding .multicolumn-list__item {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .section-{{ section.id }}-padding .multicolumn-card,
+  .section-{{ section.id }}-padding .content-container,
+  .section-{{ section.id }}-padding .multicolumn-card__info,
+  .section-{{ section.id }}-padding .multicolumn-card__image-wrapper,
+  .section-{{ section.id }}-padding .multicolumn-card:after {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .section-{{ section.id }}-padding .multicolumn-card__info {
+    padding: 2.2rem 1.4rem !important;
+  }
+
+  /* Keep this button style aligned with the main Start Creating CTA */
+  .section-{{ section.id }}-padding .button.button--primary {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.95), rgba(239, 68, 68, 0.92), rgba(38, 220, 255, 0.88)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.28) !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34), 0 0 24px rgba(220, 38, 38, 0.24) !important;
+  }
+
+  .section-{{ section.id }}-padding .button.button--primary:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 0 28px rgba(255, 77, 184, 0.5) !important;
+  }
 {%- endstyle -%}
 
 {%- liquid
