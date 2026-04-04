@@ -15,7 +15,7 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Create AI T-shirt Print",
+            "button_label_1": "Create Your AI Print Now",
             "button_link_1": "https://redhamster.ai/tshirt",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -26,9 +26,9 @@
         },
         "heading": {
           "type": "heading",
-          "name": "Create AI T-shirt Prints with Prompt",
+          "name": "Create AI T-shirt Prints in Minutes",
           "settings": {
-            "heading": "<h2><strong>Type a Prompt. Get an AI T-shirt Print. Sell It Today.</strong></h2>",
+            "heading": "<h2><strong>Turn Your Idea Into a T-shirt in Minutes</strong></h2>",
             "heading_size": "hxl"
           }
         },
@@ -47,9 +47,9 @@
         "text_YQWaGL"
       ],
       "custom_css": [
-        "button,a.button,a.btn {padding: 18px 38px !important; font-size: 20px !important; font-weight: 700 !important; border-radius: 40px !important; background: linear-gradient(90deg, #dc2626, #ef4444, #26dcff) !important; color: #fff !important; box-shadow: 0 6px 14px rgba(220, 38, 38, 0.35); transition: 0.25s;}",
+        "button,a.button,a.btn {padding: 18px 38px !important; font-size: 20px !important; font-weight: 700 !important; border-radius: 40px !important; background: linear-gradient(90deg, #26dcff, #ff4db8) !important; color: #fff !important; box-shadow: 0 4px 12px rgba(38, 220, 255, 0.35); transition: 0.25s;}",
         "button:hover,a.button:hover,a.btn:hover {transform: translateY(-3px) scale(1.03);}",
-        "h1,h2 {font-size: 48px !important; font-weight: 800; color: #fff !important; text-shadow: 0 0 10px rgba(220, 38, 38, 0.45), 0 0 20px rgba(0, 0, 0, 0.6); letter-spacing: 1px;}"
+        "h1,h2 {font-size: 48px !important; font-weight: 800; color: #fff !important; text-shadow: 0 0 10px rgba(255, 40, 80, 0.5), 0 0 20px rgba(0, 0, 0, 0.6); letter-spacing: 1px;}"
       ],
       "settings": {
         "allow_transparent_header": false,
@@ -78,7 +78,7 @@
             "show_count": true,
             "title": "",
             "title_size": "30",
-            "text": "<p>Describe your idea. AI creates your T-shirt print in seconds.</p>",
+            "text": "<p>Describe your idea. AI creates the design.</p>",
             "subtitle_size": "25",
             "link_label": "",
             "link": ""
@@ -91,7 +91,7 @@
             "show_count": true,
             "title": "",
             "title_size": "30",
-            "text": "<p>Preview on T-shirt mockups, publish to shop, and start selling.</p>",
+            "text": "<p>Put it on a T-shirt and order fast.</p>",
             "subtitle_size": "25",
             "link_label": "",
             "link": ""
@@ -103,8 +103,8 @@
         "column_43mJ9e"
       ],
       "custom_css": [
-        "p {text-shadow: 0 0 8px rgba(220, 38, 38, 0.34); color: #eee;}",
-        "a.button {background: linear-gradient(135deg, rgba(220, 38, 38, 0.95), rgba(239, 68, 68, 0.92), rgba(38, 220, 255, 0.88)) !important; border: 1px solid rgba(255, 255, 255, 0.28) !important; color: #fff !important; border-radius: 40px !important; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34), 0 0 24px rgba(220, 38, 38, 0.24) !important;}",
+        "p {text-shadow: 0 0 8px rgba(255, 40, 60, 0.4); color: #eee;}",
+        "a.button {background: linear-gradient(#26dcff, #ff4db8); box-shadow: 0 0 16px rgba(38, 220, 255, 0.38);}",
         "a.button:hover {transform: scale(1.06); box-shadow: 0 0 26px rgba(255, 77, 184, 0.52);}"
       ],
       "name": "Multicolumn With Icon",
@@ -115,7 +115,7 @@
         "subtitle": "",
         "image_width": "full",
         "image_ratio": "circle",
-        "button_label": "Open AI T-shirt Creator",
+        "button_label": "Create AI T-shirt print",
         "button_link": "https://redhamster.ai/tshirt",
         "columns_desktop": 2,
         "column_alignment": "center",
@@ -158,7 +158,7 @@
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "title": "T-shirt examples",
+        "title": "RED hamster collection",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 2,
@@ -268,15 +268,15 @@
     "call_to_action_section_8BPwm8": {
       "type": "call-to-action-section",
       "custom_css": [
-        ".main-cta h2 {font-size: 46px !important; color: #ef4444 !important; text-shadow: 0 0 16px rgba(220, 38, 38, 0.56); font-weight: 800; transition: 0.3s;}",
+        ".main-cta h2 {font-size: 46px !important; color: #ff4d4d !important; text-shadow: 0 0 16px rgba(255, 40, 60, 0.6); font-weight: 800; transition: 0.3s;}",
         ".main-cta h2:hover {transform: scale(1.04);}",
-        ".main-cta .button {border-radius: 50px !important; box-shadow: 0 0 18px rgba(220, 38, 38, 0.32) !important; transition: 0.3s;}",
+        ".main-cta .button {border-radius: 50px !important; box-shadow: 0 0 18px rgba(38, 220, 255, 0.38) !important; transition: 0.3s;}",
         ".main-cta .button:hover {transform: scale(1.08); box-shadow: 0 0 28px rgba(255, 77, 184, 0.52) !important;}"
       ],
       "settings": {
-        "section_heading": "<p><strong>Create Your AI T-shirt Print in 1 Minute</strong></p>",
+        "section_heading": "<p><strong>Start Designing Your AI T-shirt</strong></p>",
         "title_size": "30",
-        "cta_label": "<p>Start AI Creator</p>",
+        "cta_label": "<p>Start Creating</p>",
         "cta_link": "https://redhamster.ai/tshirt",
         "color_scheme": "scheme-2a59e594-6221-4eac-8961-0c3de7fda93c",
         "padding_top": 50,
