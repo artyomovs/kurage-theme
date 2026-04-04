@@ -9,8 +9,8 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/rhlogo-hor.png",
-    "logo_width": 140,
+    "logo": "shopify://shop_images/rhlogo-horizontal_1.png",
+    "logo_width": 300,
     "favicon": "shopify://shop_images/lll.png",
     "type_header_font": "figtree_n4",
     "heading_scale": 100,
