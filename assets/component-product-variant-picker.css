@@ -93,8 +93,15 @@ variant-selects {
 }
 
 .product-form__input--pill input[type='radio']:checked + label {
-  background-color: rgb(var(--color-foreground));
-  color: rgb(var(--color-background));
+  background-color: #f4f8ff;
+  color: #081325;
+  border-color: rgba(38, 220, 255, 0.9);
+  font-weight: 700;
+}
+
+.product-form__input--pill input[type='radio']:checked + label,
+.product-form__input--pill input[type='radio']:checked + label * {
+  color: #081325 !important;
 }
 
 @media screen and (forced-colors: active) {

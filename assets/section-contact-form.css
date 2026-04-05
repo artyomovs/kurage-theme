@@ -1,3 +1,18 @@
+.contact {
+  max-width: 82rem;
+  margin: 0 auto;
+  padding: 2.4rem 1.6rem 2.8rem;
+  border-radius: 2rem;
+  background: linear-gradient(160deg, rgba(6, 14, 32, 0.96), rgba(14, 10, 28, 0.95));
+  border: 1px solid rgba(38, 220, 255, 0.12);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.34);
+}
+
+.contact .field__input,
+.contact .text-area {
+  background: rgba(5, 10, 24, 0.94) !important;
+}
+
 .contact img {
   max-width: 100%;
 }

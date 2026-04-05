@@ -1719,6 +1719,20 @@ body.template-product .product-form__input--pill input[type='radio']:checked + l
   color: #081325 !important;
 }
 
+body.template-product .product-form__submit,
+body.template-product .shopify-payment-button__button,
+body.template-product .shopify-payment-button__button--unbranded {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.95), rgba(239, 68, 68, 0.92), rgba(38, 220, 255, 0.88)) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.24) !important;
+}
+
+body.template-product .product-form__submit *,
+body.template-product .shopify-payment-button__button *,
+body.template-product .shopify-payment-button__button--unbranded * {
+  color: #ffffff !important;
+}
+
 body.template-product .product-form__input--pill input[type='radio'] + label {
   background: rgba(8, 19, 48, 0.45) !important;
   color: #dce8ff !important;
