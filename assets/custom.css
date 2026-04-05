@@ -1709,13 +1709,14 @@ body.template-product .product__media-list.contains-media {
 }
 
 body.template-product .product-form__input--pill input[type='radio']:checked + label {
-  background: rgba(38, 220, 255, 0.28) !important;
-  color: #f5fbff !important;
+  background: rgba(245, 250, 255, 0.96) !important;
+  color: #081325 !important;
   border-color: rgba(38, 220, 255, 0.85) !important;
+  font-weight: 700;
 }
 
 body.template-product .product-form__input--pill input[type='radio']:checked + label * {
-  color: #f5fbff !important;
+  color: #081325 !important;
 }
 
 body.template-product .product-form__input--pill input[type='radio'] + label {
