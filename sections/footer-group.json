@@ -1,1 +1,51 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","blocks":{"text_3Jbrac":{"type":"text","disabled":true,"settings":{"heading":"<a href=\"\/pages\/create\" target=\"_blank\" title=\"Create T-shirt design and sell it online\">Home<\/a> | Create T-shirt | Catalog | About","subtext":""}}},"block_order":["text_3Jbrac"],"settings":{"color_scheme":"scheme-1","newsletter_enable":false,"newsletter_heading":"","copyright-text":true,"enable_follow_on_shop":false,"show_social":false,"enable_country_selector":false,"enable_language_selector":false,"payment_enable":true,"show_policy":true,"margin_top":24,"padding_top":22,"padding_bottom":22,"padding_top_mobile":10,"padding_bottom_mobile":40}}},"order":["footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text_3Jbrac": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "heading": "<a href=\"/pages/create\" target=\"_blank\" title=\"Create T-shirt design and sell it online\">Home</a> | Create T-shirt | Catalog | About",
+            "subtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_3Jbrac"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "",
+        "copyright-text": true,
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 22,
+        "padding_bottom": 22,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 40
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
