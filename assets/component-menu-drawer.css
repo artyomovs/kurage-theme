@@ -12,7 +12,7 @@
   height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
   top: 100%;
   left: 0;
-  background: rgba(var(--color-foreground), 0.5);
+  background: rgba(5, 8, 18, 0.94);
   opacity: 0;
   visibility: hidden;
   z-index: 2;
@@ -29,12 +29,12 @@ menu-drawer > details[open] > summary::before {
   position: absolute;
   transform: translateX(-100%);
   visibility: hidden;
-  z-index: 3;
+  z-index: 30;
   left: 0;
   top: 100%;
   width: 100%;
   padding: 0;
-  background-color: rgb(var(--color-background));
+  background: linear-gradient(180deg, rgba(8, 12, 24, 0.99), rgba(14, 10, 28, 0.98));
   overflow-x: hidden;
   filter: drop-shadow(
     var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset) var(--drawer-shadow-blur-radius)
@@ -82,6 +82,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   align-content: space-between;
   overflow-y: auto;
   height: 100%;
+  background: linear-gradient(180deg, rgba(8, 12, 24, 0.99), rgba(14, 10, 28, 0.98));
 }
 
 .menu-drawer__navigation {
@@ -139,7 +140,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   width: 100%;
   bottom: 0;
   left: 0;
-  background-color: rgb(var(--color-background));
+  background: linear-gradient(180deg, rgba(8, 12, 24, 0.99), rgba(14, 10, 28, 0.98));
   z-index: 1;
   transform: translateX(100%);
   visibility: hidden;
@@ -171,7 +172,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__utility-links {
   padding: 0;
-  background-color: rgba(var(--color-foreground), 0.03);
+  background: linear-gradient(180deg, rgba(8, 12, 24, 0.99), rgba(14, 10, 28, 0.98));
   position: relative;
 }
 
